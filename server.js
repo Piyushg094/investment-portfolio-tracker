@@ -12,7 +12,7 @@ app.use(express.json());
 app.use('/user', userRouter)
 app.use('/api/stocks', stocksRouter)
 connectDB()
-app.listen(3000, ()=>{
-    console.log('server has started at port 3000');
+app.listen(process.env.PORT || 3000, ()=>{
+    console.log(`server has started at port ${process.env.PORT}`);
 })
 
